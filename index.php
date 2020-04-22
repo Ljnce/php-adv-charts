@@ -11,11 +11,10 @@
     </head>
     <body>
 
-        <!-- Metodo con chiamata ajax [grafico 1]: -->
+        <!-- Metodo con chiamata ajax array $data [grafico 1]: -->
     <div class="container-ajax">
         <canvas id="grafico-ajax"></canvas>
     </div>
-
 
         <!-- Metodo con js (do i valori del mio array su data-chart) [grafico 2]-->
     <div class="container-js">
