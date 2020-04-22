@@ -42,9 +42,9 @@ function graficoAjax(data){
 
 // Metodo con js richiamando il data o attr [grafico 2]:
 
-    var months = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
-    var datas = $('#grafico-js').data('chart');
-    var ctx = $('#grafico-js');
+var months = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+var datas = $('#grafico-js').data('chart');
+var ctx = $('#grafico-js');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
