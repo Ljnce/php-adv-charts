@@ -4,14 +4,33 @@
     box-sizing: border-box;
 }
 
-.container-big,
-.container-big-2{
+.container-big{
+    height: 100vh;
+    width: 100vw;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black;
 }
 
 .container-ajax,
 .container-js,
 .container-anni,
 .container-venditori{
+    height: 300px;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #ededed;
+    border-style: hidden hidden solid hidden;
+}
+
+#grafico-ajax,
+#grafico-js,
+#grafico-venditori,
+#grafico-anni{
+    height: 250px;
 }

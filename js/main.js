@@ -1,4 +1,4 @@
-//  ------> MILESTONE 1 <--------
+//                        ------> MILESTONE 1 <--------
 
 //Metodo con richiamo tramite Ajax [grafico 1]:
 var urlBase = 'server.php';
@@ -57,7 +57,9 @@ var ctx = $('#grafico-js');
 
 
 
-// -------> MILESTONE 2 <--------
+//                       -------> MILESTONE 2 <--------
+
+//Metodo con richiamo tramite Ajax [grafici 3]
 var urlBase2 = 'server2.php';
 stampoMilestone2();
 
@@ -72,7 +74,7 @@ function stampoMilestone2(){
     })
 };
 
-    // ------> Grafico chart <------
+// ------> Grafico Line <------
 
 //Mi trovo i valori che servono per compilare il grafico: type e fatturato:
 function lineChart(chart){
@@ -100,7 +102,7 @@ function stampaGraficoChart(type, data){
 };
 
 
-// -----> GRAFICO PIE <-------
+// -----> Grafico Pie <-------
 
 function pieChart(pie){
     var chartType = pie.fatturato_by_agent.type;
@@ -138,3 +140,26 @@ function stampaGraficoPie(labels, data, type) {
         }
     })
 };
+
+
+//Metodo con richiamo tramite PHP [grafico 4]:
+var venditori = $('#grafico-php').data('venditori');
+var vendite = $('#grafico-php').data('vendite');
+var ctx = $('#grafico-php');
+var chart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        datasets: [{
+            data: vendite,
+            backgroundColor: ['lightgreen', 'lightred', 'lightpink', 'lightblue'],
+        }],
+
+        labels: venditori
+    },
+    options: {
+        title: {
+        display: true,
+        text: 'Guadagni singoli venditori'
+        }
+    }
+});
