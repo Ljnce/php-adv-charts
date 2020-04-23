@@ -19,7 +19,7 @@
 
                 <div class="container-ajax">
                     <canvas id="grafico-ajax"></canvas>
-    
+
             </div>
 
             <!-- Metodo con js (do i valori del mio array su data-chart) [grafico 2]-->
@@ -43,6 +43,7 @@
             </div>
 
         </div>
+        
         <!-- Metodo tramite PHP [grafico 4]-->
         <?php include 'data.php'; ?>
 
