@@ -17,33 +17,41 @@
 
             <!-- Metodo con chiamata ajax array $data [grafico 1]: -->
 
-                <div class="container-ajax">
-                    <canvas id="grafico-ajax"></canvas>
-
+            <div class="container-ajax">
+                <canvas id="grafico-ajax"></canvas>
             </div>
 
             <!-- Metodo con js (do i valori del mio array su data-chart) [grafico 2]-->
 
-                <div class="container-js">
-                    <?php include 'data.php'; ?>
-                    <canvas id="grafico-js" data-chart='<?php echo $datajson; ?>'></canvas>
-
+            <div class="container-js">
+                <?php include 'data.php'; ?>
+                <canvas id="grafico-js" data-chart='<?php echo $datajson; ?>'></canvas>
             </div>
 
 
-        <!-- MILESTONE 2 -->
+        <!-- MILESTONE 2 + 3 -->
 
-            <!-- Metodo tramite chiamata ajax [grafici 3]-->
-            <div class="container-anni">
-                <canvas id="grafico-anni"></canvas>
-            </div>
+            <!-- Metodo tramite chiamata ajax [grafici 3] + Milestone 4 (in progress)-->
+            <?php $call = $_GET['level']; ?>
 
-            <div class="container-venditori">
-                <canvas id="grafico-venditori"></canvas>
-            </div>
+            <?php if (empty($call)) {?>
+                <div class="container-anni">
+                    <canvas id="grafico-anni"></canvas>
+                </div>
+            <?php } elseif (($call == 'employee') || ($call == 'clevel')){?>
+                <div class="container-venditori">
+                    <canvas id="grafico-venditori"></canvas>
+                </div>
+            <?php } elseif ($call == 'clevel'){?>
+
+            <?php } else {?>
+                <script type="text/javascript">
+                    alert('Wrong way');
+                </script>
+            <?php }?>
 
         </div>
-        
+
         <!-- Metodo tramite PHP [grafico 4]-->
         <?php include 'data.php'; ?>
 
