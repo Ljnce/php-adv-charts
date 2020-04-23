@@ -11,15 +11,34 @@
     </head>
     <body>
 
+<!-- MILESTONE 1 -->
+    <div class="container-big">
+
         <!-- Metodo con chiamata ajax array $data [grafico 1]: -->
-    <div class="container-ajax">
-        <canvas id="grafico-ajax"></canvas>
-    </div>
+        <div class="container-ajax">
+            <canvas id="grafico-ajax"></canvas>
+        </div>
 
         <!-- Metodo con js (do i valori del mio array su data-chart) [grafico 2]-->
-    <div class="container-js">
-        <?php include 'data.php'; ?>
-        <canvas id="grafico-js" data-chart='<?php echo $datajson; ?>'></canvas>
+        <div class="container-js">
+            <?php include 'data.php'; ?>
+            <canvas id="grafico-js" data-chart='<?php echo $datajson; ?>'></canvas>
+        </div>
+
+    </div>
+
+<!-- MILESTONE 2 -->
+    <div class="container-big-2">
+
+        <!-- Metodo tramite chiamata ajax -->
+        <div class="container-anni">
+            <canvas id="grafico-anni"></canvas>
+        </div>
+
+        <div class="container-venditori">
+            <canvas id="grafico-venditori"></canvas>
+        </div>
+
     </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

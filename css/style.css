@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-big,
+.container-big-2{
+    display: flex;
+}
+
+.container-ajax,
+.container-js,
+.container-anni,
+.container-venditori{
+    width: 50%;
+}
