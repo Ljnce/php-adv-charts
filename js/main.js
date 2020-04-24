@@ -192,17 +192,20 @@ function stampaGraficoTeam (one, two, three, types){
             datasets: [
                 {
                 label: 'Team 1',
-                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgb(0,0,0,0)',
+                    borderColor: 'red',
                     data: one //inserisco i valori trovati;
                 },
                 {
-                label: 'team 2',
-                    borderColor: 'rgb(255, 99, 132)',
+                label: 'Team 2',
+                    backgroundColor: 'rgb(0,0,0,0)',
+                    borderColor: 'green',
                     data: two //inserisco i valori trovati;
                 },
                 {
-                label: 'team 3',
-                    borderColor: 'rgb(255, 99, 132)',
+                label: 'Team 3',
+                    backgroundColor: 'rgb(0,0,0,0)',
+                    borderColor: 'orange',
                     data: three //inserisco i valori trovati;
                 }
             ]

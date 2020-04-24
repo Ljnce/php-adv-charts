@@ -5,7 +5,7 @@
 }
 
 .container-big{
-    height: 300px;
+    height: 400px;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -13,13 +13,21 @@
     border: 1px solid black;
 }
 
-.container-get{
-    height: 600px;
+.title{
+    height: 70px;
+    width: 100vw;
+    text-align: center;
+}
+
+.container-get,
+.container-bottom{
+    height: 400px;
     width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border: 1px solid black;
+    justify-content: center;
 }
 
 .container-ajax,
@@ -38,6 +46,8 @@
 #grafico-ajax,
 #grafico-js,
 #grafico-venditori,
-#grafico-anni{
-    height: 250px;
+#grafico-anni,
+#grafico-team,
+#grafico-php{
+    height: 220px;
 }

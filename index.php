@@ -15,6 +15,9 @@
         <!-- MILESTONE 1 -->
         <div class="container-big">
 
+            <div class="title">
+                <h1>Milestone 1: metodo Ajax e PHP</h1>
+            </div>
             <!-- Metodo con chiamata ajax array $data [grafico 1]: -->
 
             <div class="container-ajax">
@@ -35,6 +38,9 @@
             <!-- Metodo tramite chiamata ajax [grafici 3] + Milestone 4 (in progress)-->
         <div class="container-get">
 
+            <div class="title">
+                <h1>Milestone 3: chiamata grafico tramite GET</h1>
+            </div>
             <?php $call = $_GET['level']; ?>
 
             <?php if ((empty($call)) || ($call == 'guest')) {?>
@@ -61,23 +67,31 @@
         </div>
 
         <!-- Metodo tramite PHP [grafico 4]-->
-        <?php include 'data.php'; ?>
 
-        <?php
+        <div class="container-bottom">
 
-            $pie_data = $graphs["fatturato_by_agent"]['data']; //Entro nell'array che mi serve;
-            $venditori = [];
-            $vendite = [];
+            <div class="title">
+                <h1>Milestone 2: grafico con chiamata PHP in "data-type"</h1>
+            </div>
 
-            foreach ($pie_data as $key => $value) { //Ciclo per trovare le mie chiavi e valori;
-            $venditori[]= $key; //Push delle mie chiavi dentro l'array vuoto venditori;
-            $vendite[]= $value; //Push dei miei valori dentro l'array vuoto vendite;
-            };
+            <?php include 'data.php'; ?>
 
-        ?>
+            <?php
 
-        <div class="container-php">
-            <canvas id="grafico-php" data-venditori= '<?php echo json_encode($venditori); ?>' data-vendite= '<?php echo json_encode($vendite); ?>'></canvas>
+                $pie_data = $graphs["fatturato_by_agent"]['data']; //Entro nell'array che mi serve;
+                $venditori = [];
+                $vendite = [];
+
+                foreach ($pie_data as $key => $value) { //Ciclo per trovare le mie chiavi e valori;
+                $venditori[]= $key; //Push delle mie chiavi dentro l'array vuoto venditori;
+                $vendite[]= $value; //Push dei miei valori dentro l'array vuoto vendite;
+                };
+
+            ?>
+
+            <div class="container-php">
+                <canvas id="grafico-php" data-venditori= '<?php echo json_encode($venditori); ?>' data-vendite= '<?php echo json_encode($vendite); ?>'></canvas>
+            </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
