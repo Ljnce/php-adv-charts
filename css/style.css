@@ -74,7 +74,8 @@ i{
 
 @media screen and (max-width: 768px){
     .container-big,
-    .container-get{
+    .container-get,
+    .container-post{
         height: 760px;
         justify-content: center;
     }
