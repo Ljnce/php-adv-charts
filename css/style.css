@@ -54,6 +54,10 @@ i{
     font-size: 35px;
 }
 
+.container-mobile{
+    display: none;
+}
+
 @media screen and (max-width: 768px){
     .container-big,
     .container-get{
