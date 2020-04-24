@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://kit.fontawesome.com/4cd7baf8bb.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -17,6 +18,7 @@
 
             <div class="title">
                 <h1>Milestone 1: metodo Ajax e PHP</h1>
+                <i class="fas fa-chart-line"></i>
             </div>
             <!-- Metodo con chiamata ajax array $data [grafico 1]: -->
 
@@ -97,6 +99,7 @@
             <div class="enter">
                 <div class="push">
                     <h1>Chart PHP/JS</h1>
+                    <i class="fas fa-chart-pie"></i>
                 </div>
             </div>
         </div>
