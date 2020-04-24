@@ -34,16 +34,18 @@
             <!-- Metodo tramite chiamata ajax [grafici 3] + Milestone 4 (in progress)-->
             <?php $call = $_GET['level']; ?>
 
-            <?php if (empty($call)) {?>
+            <?php if ((empty($call)) || ($call == 'guest')) {?>
                 <div class="container-anni">
                     <canvas id="grafico-anni"></canvas>
                 </div>
-            <?php } elseif (($call == 'employee') || ($call == 'clevel')){?>
+            <?php } elseif ($call == 'employee'){?>
                 <div class="container-venditori">
                     <canvas id="grafico-venditori"></canvas>
                 </div>
             <?php } elseif ($call == 'clevel'){?>
-
+                <div class="container-team">
+                    <canvas id="grafico-team"></canvas>
+                </div>
             <?php } else {?>
                 <script type="text/javascript">
                     alert('Wrong way');

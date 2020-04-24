@@ -14,9 +14,7 @@
 }
 
 .container-ajax,
-.container-js,
-.container-anni,
-.container-venditori{
+.container-js{
     height: 300px;
     width: 50%;
     display: flex;

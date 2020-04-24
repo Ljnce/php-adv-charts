@@ -70,6 +70,7 @@ function stampoMilestone2(){
         success: function(data){
             lineChart(data);
             pieChart(data);
+            teamChart(data);
         }
     })
 };
@@ -77,9 +78,9 @@ function stampoMilestone2(){
 // ------> Grafico Line <------
 
 //Mi trovo i valori che servono per compilare il grafico: type e fatturato:
-function lineChart(chart){
-    var type = chart.fatturato.type; //trovo il tipo di grafico
-    var data = chart.fatturato.data; //trovo i dati che mi servono
+function lineChart(line){
+    var type = line.fatturato.type; //trovo il tipo di grafico
+    var data = line.fatturato.data; //trovo i dati che mi servono
     stampaGraficoChart(type, data);
 };
 
@@ -163,3 +164,40 @@ var chart = new Chart(ctx, {
         }
     }
 });
+
+
+//                  ----------> MILESTONE 3 <----------
+
+
+function teamChart(team){
+    var type = team.team_efficiency.type;
+    var datiTeam = team.team_efficiency.data;
+    ricavaDatiTeam(datiTeam, type);
+};
+
+function ricavaDatiTeam(dati, types){
+    var teamOne = dati.Team1;
+    console.log(teamOne);
+    var teamTwo = dati.Team2;
+    console.log(teamTwo);
+    var teamThree = dati.Team3;
+    console.log(teamThree);
+    stampaGraficoTeam(teamOne, teamTwo, teamThree, types);
+};
+
+function stampaGraficoTeam (one, two, three, types){
+    var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+    var ctx = $('#grafico-team');
+    var chart = new Chart(ctx, {
+        type: types,
+            data: {
+            labels: mesi,
+            datasets: [{
+            label: 'Fatturato per mesi',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: one //inserisco i valori trovati;
+            }]
+        },
+    });
+};
