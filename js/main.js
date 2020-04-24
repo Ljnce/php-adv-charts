@@ -177,11 +177,8 @@ function teamChart(team){
 
 function ricavaDatiTeam(dati, types){
     var teamOne = dati.Team1;
-    console.log(teamOne);
     var teamTwo = dati.Team2;
-    console.log(teamTwo);
     var teamThree = dati.Team3;
-    console.log(teamThree);
     stampaGraficoTeam(teamOne, teamTwo, teamThree, types);
 };
 
@@ -192,18 +189,23 @@ function stampaGraficoTeam (one, two, three, types){
         type: types,
             data: {
             labels: mesi,
-            datasets: [{
-                borderColor: 'rgb(255, 99, 132)',
-                data: two //inserisco i valori trovati;
-            }],
-            datasets: [{
-                borderColor: 'rgb(255, 99, 132)',
-                data: one //inserisco i valori trovati;
-            }],
-            datasets: [{
-                borderColor: 'rgb(255, 99, 132)',
-                data: three //inserisco i valori trovati;
-            }]
+            datasets: [
+                {
+                label: 'Team 1',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: one //inserisco i valori trovati;
+                },
+                {
+                label: 'team 2',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: two //inserisco i valori trovati;
+                },
+                {
+                label: 'team 3',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: three //inserisco i valori trovati;
+                }
+            ]
         },
     });
 };
