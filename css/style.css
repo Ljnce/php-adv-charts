@@ -17,8 +17,22 @@ body{
     background-color: #ededed;
 }
 
+.call-post{
+    height: 100px;
+    width: 100vw;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+input{
+    height: 20px;
+    width: 140px;
+}
+
 .container-big,
 .container-get,
+.container-post,
 .container-bottom{
     height: 500px;
     width: 100vw;

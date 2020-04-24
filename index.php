@@ -68,6 +68,45 @@
 
         </div>
 
+        <!-- EXTRA con chiamata POST -->
+
+        <div class="container-post">
+            <div class="title">
+                <h1>EXTRA: chiamata post a grafici</h1>
+            </div>
+
+            <?php $post_call = $_POST['level'] ?>
+
+            <?php if (($post_call == false) || ($post_call == 'guest')) {?>
+                <div class="container-anni">
+                    <canvas id="grafico-anni"></canvas>
+                </div>
+            <?php } elseif ($post_call == 'employee'){?>
+                <div class="container-venditori">
+                    <canvas id="grafico-venditori"></canvas>
+                </div>
+            <?php } elseif ($post_call == 'clevel'){?>
+                <div class="container-team">
+                    <canvas id="grafico-team"></canvas>
+                </div>
+                <div class="container-venditori">
+                    <canvas id="grafico-venditori"></canvas>
+                </div>
+            <?php } else {?>
+                <script type="text/javascript">
+                    alert('Wrong way');
+                </script>
+            <?php }?>
+
+            <div class="call-post">
+                <h3>Inserisci il tuo livello</h3>
+                <form action="index.php" method="post">
+                    <input type="text" name="level" placeholder="Access">
+                </form>
+            </div>
+
+        </div>
+
         <!-- Metodo tramite PHP [grafico 4]-->
 
         <div class="container-bottom">
