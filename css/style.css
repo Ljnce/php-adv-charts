@@ -27,6 +27,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     border: 1px solid black;
+    border-style: hidden hidden solid hidden;
 }
 
 .container-ajax,
@@ -56,12 +57,13 @@ i{
 @media screen and (max-width: 768px){
     .container-big,
     .container-get{
-        height: 700px;
+        height: 760px;
         justify-content: center;
     }
 
     .title{
         font-size: 15px;
+        height: 140px;
     }
 
     .container-ajax,
