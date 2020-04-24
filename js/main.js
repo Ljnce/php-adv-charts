@@ -193,10 +193,16 @@ function stampaGraficoTeam (one, two, three, types){
             data: {
             labels: mesi,
             datasets: [{
-            label: 'Fatturato per mesi',
-                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: two //inserisco i valori trovati;
+            }],
+            datasets: [{
                 borderColor: 'rgb(255, 99, 132)',
                 data: one //inserisco i valori trovati;
+            }],
+            datasets: [{
+                borderColor: 'rgb(255, 99, 132)',
+                data: three //inserisco i valori trovati;
             }]
         },
     });

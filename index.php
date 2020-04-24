@@ -28,10 +28,13 @@
                 <canvas id="grafico-js" data-chart='<?php echo $datajson; ?>'></canvas>
             </div>
 
+        </div>
 
         <!-- MILESTONE 2 + 3 -->
 
             <!-- Metodo tramite chiamata ajax [grafici 3] + Milestone 4 (in progress)-->
+        <div class="container-get">
+
             <?php $call = $_GET['level']; ?>
 
             <?php if ((empty($call)) || ($call == 'guest')) {?>
@@ -45,6 +48,9 @@
             <?php } elseif ($call == 'clevel'){?>
                 <div class="container-team">
                     <canvas id="grafico-team"></canvas>
+                </div>
+                <div class="container-venditori">
+                    <canvas id="grafico-venditori"></canvas>
                 </div>
             <?php } else {?>
                 <script type="text/javascript">
