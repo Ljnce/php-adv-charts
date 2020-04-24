@@ -45,7 +45,7 @@
             </div>
             <?php $call = $_GET['level']; ?>
 
-            <?php if ((empty($call)) || ($call == 'guest')) {?>
+            <?php if (($call == false) || ($call == 'guest')) {?>
                 <div class="container-anni">
                     <canvas id="grafico-anni"></canvas>
                 </div>
@@ -75,7 +75,7 @@
                 <h1>EXTRA: chiamata post a grafici</h1>
             </div>
 
-            <?php $post_call = $_POST['level'] ?>
+            <?php $post_call = $_POST['post'] ?>
 
             <?php if (($post_call == false) || ($post_call == 'guest')) {?>
                 <div class="container-anni">
@@ -100,8 +100,8 @@
 
             <div class="call-post">
                 <h3>Inserisci il tuo livello</h3>
-                <form action="index.php" method="post">
-                    <input type="text" name="level" placeholder="Access">
+                <form method="post">
+                    <input type="text" name="post" placeholder="Access">
                 </form>
             </div>
 
