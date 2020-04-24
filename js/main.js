@@ -27,9 +27,9 @@ function graficoAjax(data){
         data: {
             labels: mesi,
             datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                label: 'Ajax',
+                backgroundColor: 'lightgreen',
+                borderColor: 'green',
                 data: data //inserisco i valori trovati;
             }]
         },
@@ -47,9 +47,9 @@ var ctx = $('#grafico-js');
         data: {
             labels: months,
             datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                label: 'PHP',
+                backgroundColor: 'lightyellow',
+                borderColor: 'orange',
                 data: datas //inserisco i valori trovati;
             }]
         },
@@ -212,3 +212,8 @@ function stampaGraficoTeam (one, two, three, types){
         },
     });
 };
+
+//  ---------> EXTRA <---------
+$('.push').on('click', 'h1', function(){
+    $('.container-mobile').slideUp();
+})

@@ -93,6 +93,13 @@
                 <canvas id="grafico-php" data-venditori= '<?php echo json_encode($venditori); ?>' data-vendite= '<?php echo json_encode($vendite); ?>'></canvas>
             </div>
         </div>
+        <div class="container-mobile">
+            <div class="enter">
+                <div class="push">
+                    <h1>Chart PHP/JS</h1>
+                </div>
+            </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/main.js" charset="utf-8"></script>
